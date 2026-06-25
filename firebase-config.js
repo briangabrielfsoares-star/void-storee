@@ -3,12 +3,12 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-aut
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "SEU_PROJETO.firebaseapp.com",
-  projectId: "SEU_PROJECT_ID",
-  storageBucket: "SEU_PROJETO.appspot.com",
-  messagingSenderId: "SEU_MESSAGING_SENDER_ID",
-  appId: "SEU_APP_ID"
+  apiKey: "AIzaSyB9ANlp_RTQhyGm3I_AzccJwj3rK9nt0n0",
+  authDomain: "void-13c0b.firebaseapp.com",
+  projectId: "void-13c0b",
+  storageBucket: "void-13c0b.firebasestorage.app",
+  messagingSenderId: "1085505001635",
+  appId: "1:1085505001635:web:50979c6d551d3b59518716"
 };
 
 export const ADMIN_EMAIL = "briangabrielfsoares@gmail.com";
