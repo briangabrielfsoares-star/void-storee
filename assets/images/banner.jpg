@@ -2,7 +2,8 @@ VOID-STORE/
 │
 ├── assets/
 │   └── images/
-│       └── banner.jpg
+│       └── banner.jpg   ← SUA FOTO
 │
 ├── style.css
-└── index.html
+├── index.html
+└── ...
