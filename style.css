@@ -155,13 +155,27 @@ label {
 }
 
 .hero {
-  min-height: 680px;
-  display: grid;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
   align-items: center;
-  padding: 80px clamp(18px, 6vw, 90px);
-  background:
-    linear-gradient(90deg, rgba(8, 8, 10, 0.95) 0%, rgba(8, 8, 10, 0.62) 48%, rgba(8, 8, 10, 0.88) 100%),
-    url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1800") center/cover;
+  padding: 0 clamp(24px, 6vw, 90px);
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(8, 8, 10, 0.92) 0%,
+      rgba(8, 8, 10, 0.55) 35%,
+      rgba(8, 8, 10, 0.20) 65%,
+      rgba(8, 8, 10, 0.70) 100%
+    ),
+    url("./assets/images/banner.jpg");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
   border-bottom: 1px solid var(--border);
 }
 
