@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | VOID</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">VOID</a>
+    <nav class="nav-actions">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="carrinho.html">Carrinho <span class="cart-badge" data-cart-count>0</span></a>
+      <a href="perfil.html">Conta</a>
+      <a href="admin.html" data-admin-only>Admin</a>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-card">
+      <span class="eyebrow">Acesso</span>
+      <h1>Entrar na VOID</h1>
+      <p>Acesse sua conta para ver pedidos ou entrar no painel administrativo.</p>
+
+      <form id="loginForm">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" placeholder="seuemail@email.com" required>
+
+        <label for="loginPassword">Senha</label>
+        <input id="loginPassword" type="password" placeholder="Sua senha" required>
+
+        <button class="primary-btn full" type="submit">Entrar</button>
+        <button id="resetPasswordBtn" class="link-btn" type="button">Esqueci minha senha</button>
+        <p id="loginMessage" class="form-message"></p>
+      </form>
+    </section>
+
+    <section class="auth-card muted-card">
+      <span class="eyebrow">Novo cliente</span>
+      <h2>Criar conta</h2>
+      <p>Cadastre-se para acompanhar seus pedidos e agilizar compras.</p>
+
+      <form id="registerForm">
+        <label for="registerName">Nome</label>
+        <input id="registerName" type="text" placeholder="Seu nome" required>
+
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" type="email" placeholder="seuemail@email.com" required>
+
+        <label for="registerPassword">Senha</label>
+        <input id="registerPassword" type="password" placeholder="Mínimo de 6 caracteres" required>
+
+        <button class="secondary-btn full" type="submit">Criar conta</button>
+        <p id="registerMessage" class="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

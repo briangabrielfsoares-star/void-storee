@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | VOID</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body data-page="admin">
+  <header class="navbar">
+    <a href="index.html" class="logo">VOID</a>
+    <nav class="nav-actions">
+      <a href="index.html">Loja</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="carrinho.html">Carrinho <span class="cart-badge" data-cart-count>0</span></a>
+      <button class="mini-btn" type="button" data-logout>Sair</button>
+    </nav>
+  </header>
+
+  <main class="admin-page">
+    <section class="admin-hero">
+      <span class="eyebrow">Painel VOID</span>
+      <h1>Painel Administrativo</h1>
+      <p>Bem-vindo, <strong data-user-email>carregando...</strong></p>
+      <p id="adminGuardMessage" class="form-message"></p>
+    </section>
+
+    <section class="admin-stats">
+      <article class="admin-card">
+        <h2>Produtos</h2>
+        <p>Cadastre, edite e remova produtos que aparecem na loja.</p>
+      </article>
+      <article class="admin-card">
+        <h2>Pedidos</h2>
+        <p>Veja os pedidos criados no checkout.</p>
+      </article>
+      <article class="admin-card">
+        <h2>Estoque</h2>
+        <p>Controle estoque e disponibilidade por produto.</p>
+      </article>
+    </section>
+
+    <section class="admin-layout">
+      <form id="productForm" class="admin-form">
+        <h2>Cadastrar produto</h2>
+        <input type="hidden" id="productId">
+
+        <label for="productName">Nome do produto</label>
+        <input id="productName" type="text" placeholder="Ex: Camiseta Oversized VOID" required>
+
+        <div class="form-grid two">
+          <div>
+            <label for="productPrice">Preço</label>
+            <input id="productPrice" type="number" step="0.01" min="0" placeholder="129.90" required>
+          </div>
+          <div>
+            <label for="productCategory">Categoria</label>
+            <select id="productCategory" required>
+              <option value="Camisetas">Camisetas</option>
+              <option value="Moletons">Moletons</option>
+              <option value="Calças">Calças</option>
+              <option value="Tênis">Tênis</option>
+              <option value="Acessórios">Acessórios</option>
+              <option value="Jaquetas">Jaquetas</option>
+              <option value="Streetwear">Streetwear</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="productImage">URL da imagem</label>
+        <input id="productImage" type="url" placeholder="https://..." required>
+
+        <label for="productDescription">Descrição</label>
+        <textarea id="productDescription" rows="4" placeholder="Descrição do produto"></textarea>
+
+        <div class="form-grid two">
+          <div>
+            <label for="productSizes">Tamanhos</label>
+            <input id="productSizes" type="text" placeholder="P, M, G, GG" value="P, M, G, GG">
+          </div>
+          <div>
+            <label for="productStock">Estoque</label>
+            <input id="productStock" type="number" min="0" value="1">
+          </div>
+        </div>
+
+        <div class="check-row">
+          <label><input id="productFeatured" type="checkbox"> Produto em destaque</label>
+          <label><input id="productActive" type="checkbox" checked> Produto ativo</label>
+        </div>
+
+        <div class="admin-form-actions">
+          <button id="productSubmitBtn" class="primary-btn" type="submit">Cadastrar produto</button>
+          <button id="productResetBtn" class="secondary-btn" type="button">Limpar</button>
+        </div>
+
+        <button id="seedProductsBtn" class="link-btn" type="button">Criar produtos exemplo no Firestore</button>
+        <p id="productMessage" class="form-message"></p>
+      </form>
+
+      <section class="admin-list-panel">
+        <div class="section-title slim">
+          <div>
+            <span class="eyebrow">Catálogo</span>
+            <h2>Produtos cadastrados</h2>
+          </div>
+        </div>
+        <div id="adminProductsList" class="admin-list"></div>
+      </section>
+    </section>
+
+    <section class="admin-orders-panel">
+      <div class="section-title slim">
+        <div>
+          <span class="eyebrow">Vendas</span>
+          <h2>Pedidos recentes</h2>
+        </div>
+      </div>
+      <div id="adminOrdersList" class="orders-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="firestore-products.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | VOID</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">VOID</a>
+    <div class="search-box">
+      <input id="productSearch" type="search" placeholder="Pesquisar produto...">
+    </div>
+    <nav class="nav-actions">
+      <a href="index.html">Início</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="carrinho.html">Carrinho <span class="cart-badge" data-cart-count>0</span></a>
+      <a href="perfil.html">Conta</a>
+      <a href="admin.html" data-admin-only>Admin</a>
+    </nav>
+  </header>
+
+  <main class="products-page">
+    <div class="page-heading">
+      <span class="eyebrow">VOID Store</span>
+      <h1>Todos os Produtos</h1>
+      <p>Escolha suas peças, adicione ao carrinho e finalize o pedido.</p>
+    </div>
+
+    <div class="filters">
+      <button class="active" type="button" data-filter="Todos">Todos</button>
+      <button type="button" data-filter="Camisetas">Camisetas</button>
+      <button type="button" data-filter="Moletons">Moletons</button>
+      <button type="button" data-filter="Calças">Calças</button>
+      <button type="button" data-filter="Tênis">Tênis</button>
+      <button type="button" data-filter="Acessórios">Acessórios</button>
+      <button type="button" data-filter="Jaquetas">Jaquetas</button>
+    </div>
+
+    <p id="productsEmpty" class="empty-state">Nenhum produto encontrado.</p>
+    <div id="productsGrid" class="product-grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">VOID</div>
+    <p>Streetwear Premium © <span data-year>2026</span></p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="firestore-products.js"></script>
+</body>
+</html>

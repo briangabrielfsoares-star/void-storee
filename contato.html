@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | VOID</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">VOID</a>
+    <nav class="nav-actions">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="perfil.html">Conta</a>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-card">
+      <span class="eyebrow">Atendimento</span>
+      <h1>Contato</h1>
+      <p>Fale com a VOID para dúvidas sobre pedidos, produtos, trocas ou parcerias.</p>
+
+      <form id="contactForm">
+        <label for="contactName">Nome</label>
+        <input id="contactName" type="text" placeholder="Seu nome" required>
+
+        <label for="contactEmail">Email</label>
+        <input id="contactEmail" type="email" placeholder="seuemail@email.com" required>
+
+        <label for="contactMessage">Mensagem</label>
+        <textarea id="contactMessage" rows="7" placeholder="Escreva sua mensagem" required></textarea>
+
+        <button class="primary-btn full" type="submit">Enviar mensagem</button>
+        <p class="form-message">O formulário abre seu app de email para envio.</p>
+      </form>
+    </section>
+
+    <section class="auth-card muted-card">
+      <span class="eyebrow">VOID</span>
+      <h2>Canais</h2>
+      <p>Email: briangabrielfsoares@gmail.com</p>
+      <p>Atendimento: segunda a sexta, 9h às 18h.</p>
+      <p>Pedidos criados no checkout aparecem direto no painel admin.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">VOID</div>
+    <p>Streetwear Premium © <span data-year>2026</span></p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script>
+    document.getElementById("contactForm")?.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("contactName").value;
+      const email = document.getElementById("contactEmail").value;
+      const message = document.getElementById("contactMessage").value;
+      const subject = encodeURIComponent("Contato VOID - " + name);
+      const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`);
+      window.location.href = `mailto:briangabrielfsoares@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>

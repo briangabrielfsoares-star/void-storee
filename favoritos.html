@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favoritos | VOID</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">VOID</a>
+    <nav class="nav-actions">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="carrinho.html">Carrinho <span class="cart-badge" data-cart-count>0</span></a>
+      <a href="perfil.html">Conta</a>
+      <a href="admin.html" data-admin-only>Admin</a>
+    </nav>
+  </header>
+
+  <main class="favorites-page">
+    <div class="page-heading">
+      <span class="eyebrow">Wishlist</span>
+      <h1>Seus Favoritos</h1>
+      <p>Guarde as peças que combinam com seu próximo look.</p>
+    </div>
+
+    <p id="favorites-empty" class="empty-state">Nenhum favorito encontrado.</p>
+    <div id="favorites-container" class="product-grid"></div>
+  </main>
+
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

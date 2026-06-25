@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil | VOID</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body data-page="profile">
+  <header class="navbar">
+    <a href="index.html" class="logo">VOID</a>
+    <nav class="nav-actions">
+      <a href="produtos.html">Produtos</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="carrinho.html">Carrinho <span class="cart-badge" data-cart-count>0</span></a>
+      <a href="admin.html" data-admin-only>Admin</a>
+      <button class="mini-btn" type="button" data-logout>Sair</button>
+    </nav>
+  </header>
+
+  <main class="profile-page">
+    <section class="profile-card">
+      <div class="profile-avatar">V</div>
+      <span class="eyebrow">Minha conta</span>
+      <h1 data-user-name>Cliente VOID</h1>
+      <p data-user-email>Carregando...</p>
+    </section>
+
+    <section class="profile-content">
+      <div class="profile-box">
+        <h2>Meus Pedidos</h2>
+        <div id="profileOrdersList">
+          <p>Carregando pedidos...</p>
+        </div>
+      </div>
+
+      <div class="profile-box">
+        <h2>Favoritos</h2>
+        <p>Veja as peças salvas para comprar depois.</p>
+        <a href="favoritos.html" class="secondary-btn full">Abrir favoritos</a>
+      </div>
+
+      <div class="profile-box">
+        <h2>Carrinho</h2>
+        <p>Continue de onde parou e finalize seu pedido.</p>
+        <a href="carrinho.html" class="primary-btn full">Ver carrinho</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="firestore-products.js"></script>
+</body>
+</html>

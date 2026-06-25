@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VOID Store: streetwear premium, peças oversized, dark, clean e urbanas.">
+  <title>VOID | Streetwear Premium</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">VOID</a>
+
+    <nav class="nav-actions">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="carrinho.html">Carrinho <span class="cart-badge" data-cart-count>0</span></a>
+      <a href="perfil.html">Conta</a>
+      <a href="admin.html" data-admin-only>Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">NOVA COLEÇÃO</span>
+        <h1>Streetwear para quem não se encaixa.</h1>
+        <p>Peças premium, estética dark e cortes urbanos para montar looks com identidade própria.</p>
+        <div class="hero-buttons">
+          <a href="produtos.html" class="primary-btn">Explorar coleção</a>
+          <a href="#lancamentos" class="secondary-btn">Ver lançamentos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Categorias</h2>
+      <div class="category-list">
+        <a href="produtos.html">Todos</a>
+        <a href="produtos.html">Camisetas</a>
+        <a href="produtos.html">Moletons</a>
+        <a href="produtos.html">Calças</a>
+        <a href="produtos.html">Tênis</a>
+        <a href="produtos.html">Acessórios</a>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">Destaques</span>
+          <h2>Looks em destaque</h2>
+        </div>
+        <a href="produtos.html">Ver todos</a>
+      </div>
+      <div id="featuredLooksGrid" class="cards-grid skeleton-grid"></div>
+    </section>
+
+    <section id="lancamentos" class="products">
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">Drop atual</span>
+          <h2>Lançamentos</h2>
+        </div>
+        <a href="produtos.html">Ver todos</a>
+      </div>
+      <div id="homeProductsGrid" class="product-grid skeleton-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">VOID</div>
+    <p>Streetwear Premium © <span data-year>2026</span></p>
+    <div class="footer-links">
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="termos.html">Termos</a>
+      <a href="privacidade.html">Privacidade</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="firestore-products.js"></script>
+</body>
+</html>
