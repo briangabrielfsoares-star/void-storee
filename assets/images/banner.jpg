@@ -1,0 +1,8 @@
+VOID-STORE/
+│
+├── assets/
+│   └── images/
+│       └── banner.jpg
+│
+├── style.css
+└── index.html
